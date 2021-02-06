@@ -23,4 +23,5 @@ public class NoteMO: NSManagedObject {
         
         return note
     }
+    
 }

@@ -27,12 +27,30 @@ class DetailNoteViewController: UIViewController,  UIImagePickerControllerDelega
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 100, height: 100)
+        collectionView.collectionViewLayout = layout
         
         titleTextField.text = note?.title
         contentTextView.text = note?.contents
         
         setupNavigationItem()
         loadDataImage()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if titleTextField.text != note?.title || contentTextView.text != note?.contents {
+            if titleTextField.text != "" {
+                note?.title = titleTextField.text
+            }
+            
+            if contentTextView.text != "" {
+                note?.contents = contentTextView.text
+            }
+            
+        }
+        
     }
     
     func loadDataImage() {
@@ -112,6 +130,10 @@ extension DetailNoteViewController : UICollectionViewDelegate, UICollectionViewD
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return fetchresultsController?.sections?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
