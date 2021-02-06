@@ -22,6 +22,7 @@
 		AA2EA3A225CC67AA00F2D60C /* NoteImageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2EA3A125CC67AA00F2D60C /* NoteImageMO.swift */; };
 		AA2EA3B725CC7B6500F2D60C /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2EA3B625CC7B6500F2D60C /* NoteTableViewController.swift */; };
 		AA68DA4E25CE8576007AF451 /* DownSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA68DA4D25CE8576007AF451 /* DownSample.swift */; };
+		AA68DA5425CE949C007AF451 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA68DA5325CE949C007AF451 /* ImageViewCell.swift */; };
 		AA78B0ED25CD8DBF00A3C531 /* HelperDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78B0EC25CD8DBF00A3C531 /* HelperDateFormatter.swift */; };
 		AA78B0F325CD939C00A3C531 /* NotebookImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78B0F225CD939C00A3C531 /* NotebookImage.swift */; };
 		AA78B0FD25CDE9E600A3C531 /* DetailNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78B0FC25CDE9E600A3C531 /* DetailNoteViewController.swift */; };
@@ -57,6 +58,7 @@
 		AA2EA3A125CC67AA00F2D60C /* NoteImageMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteImageMO.swift; sourceTree = "<group>"; };
 		AA2EA3B625CC7B6500F2D60C /* NoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
 		AA68DA4D25CE8576007AF451 /* DownSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownSample.swift; sourceTree = "<group>"; };
+		AA68DA5325CE949C007AF451 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		AA78B0EC25CD8DBF00A3C531 /* HelperDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperDateFormatter.swift; sourceTree = "<group>"; };
 		AA78B0F225CD939C00A3C531 /* NotebookImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookImage.swift; sourceTree = "<group>"; };
 		AA78B0FC25CDE9E600A3C531 /* DetailNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				AA2D0C1C25C57CED00057313 /* NotebookTableViewController.swift */,
 				AA2EA3B625CC7B6500F2D60C /* NoteTableViewController.swift */,
 				AA78B0FC25CDE9E600A3C531 /* DetailNoteViewController.swift */,
+				AA68DA5325CE949C007AF451 /* ImageViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				AA78B0ED25CD8DBF00A3C531 /* HelperDateFormatter.swift in Sources */,
 				AA78B0FD25CDE9E600A3C531 /* DetailNoteViewController.swift in Sources */,
 				AA78B0F325CD939C00A3C531 /* NotebookImage.swift in Sources */,
+				AA68DA5425CE949C007AF451 /* ImageViewCell.swift in Sources */,
 				AA0E10E925C485BD0003F988 /* AppDelegate.swift in Sources */,
 				AA2D0C2625C57E1600057313 /* NoteMO.swift in Sources */,
 				AA0E10F325C485BD0003F988 /* NotebookModel.xcdatamodeld in Sources */,
