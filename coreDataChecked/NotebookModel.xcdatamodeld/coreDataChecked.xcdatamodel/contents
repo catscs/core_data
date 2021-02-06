@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Note" representedClassName=".NoteMO" syncable="YES" codeGenerationType="category">
+        <attribute name="contents" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="notebook" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" inverseName="notes" inverseEntity="Notebook"/>
+        <relationship name="noteImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NoteImage" inverseName="note" inverseEntity="NoteImage"/>
+    </entity>
+    <entity name="Notebook" representedClassName=".NotebookMO" syncable="YES" codeGenerationType="category">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="notebookImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NotebookImage" inverseName="notebook" inverseEntity="NotebookImage"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" inverseName="notebook" inverseEntity="Note"/>
+    </entity>
+    <entity name="NotebookImage" representedClassName=".NotebookImageMO" syncable="YES" codeGenerationType="category">
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <relationship name="notebook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" inverseName="notebookImage" inverseEntity="Notebook"/>
+    </entity>
+    <entity name="NoteImage" representedClassName=".NoteImageMO" syncable="YES" codeGenerationType="category">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="image" attributeType="Binary"/>
+        <relationship name="note" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="noteImages" inverseEntity="Note"/>
+    </entity>
+    <elements>
+        <element name="Note" positionX="700.765869140625" positionY="-1144.678924560547" width="128" height="104"/>
+        <element name="Notebook" positionX="1148.003051757812" positionY="-957.2355346679688" width="128" height="89"/>
+        <element name="NoteImage" positionX="273.5831298828125" positionY="-1158.982086181641" width="128" height="88"/>
+        <element name="NotebookImage" positionX="312.864013671875" positionY="-944.8496704101562" width="128" height="73"/>
+    </elements>
+</model>
