@@ -28,8 +28,30 @@ class NotebookTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeFetchReultsController()
+       
+        let loadDataBarButtonItem = UIBarButtonItem(title: "Load Data", style: .done, target: self, action: #selector(loadData))
+        navigationItem.rightBarButtonItem = loadDataBarButtonItem
         
-        
+        let deleteBarButtonItem = UIBarButtonItem(title: "Delete Data", style: .done, target: self, action: #selector(deleteData))
+        navigationItem.leftBarButtonItem = deleteBarButtonItem
+    }
+    
+    @objc
+    func loadData(){
+        dataController?.loadNotebooksAndNoteIntoViewContext()
+    }
+    
+    @objc
+    func deleteData() {
+        dataController?.save()
+        dataController?.delete()
+        dataController?.reset()
+        initializeFetchReultsController()
+        tableView.reloadData()
+    }
+    
+    func initializeFetchReultsController() {
         guard let dataController = dataController else {return}
         
         let viewContext = dataController.viewContext
@@ -79,8 +101,6 @@ class NotebookTableViewController: UITableViewController {
            let image = UIImage(data: imageData){
             cell.imageView?.image = image
         }
-        
-        
         
         
         return cell

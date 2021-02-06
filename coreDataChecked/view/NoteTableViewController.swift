@@ -43,12 +43,12 @@ class NoteTableViewController: UITableViewController {
     }
     
     func setupNavigationItem() {
-        let addNoteBarButtonItem = UIBarButtonItem(title: "Add Note", style: .done, target: self, action: #selector(createNote))
+        let addNoteBarButtonItem = UIBarButtonItem(title: "Add Note", style: .done, target: self, action: #selector(addNote))
         navigationItem.rightBarButtonItem = addNoteBarButtonItem
     }
     
     @objc
-    func createNote() {
+    func addNote() {
         guard let notebook = notebook else {return}
         dataController?.createNote(notebook: notebook)
     }
